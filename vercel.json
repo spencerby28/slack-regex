@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/slack/events",
+      "dest": "/api/slack/events"
+    },
+    {
+      "src": "/slack/interactive",
+      "dest": "/api/slack/interactive"
+    },
+    {
+      "src": "/slack/commands",
+      "dest": "/api/slack/commands"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index"
+    }
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 30
+    }
+  }
+}
