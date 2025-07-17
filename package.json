@@ -8,7 +8,9 @@
     "dev": "nodemon src/index.js",
     "mcp": "node src/mcp-server.js",
     "setup": "node setup.js",
-    "demo": "node examples/api-demo.js"
+    "demo": "node examples/api-demo.js",
+    "vercel-build": "echo 'Build completed'",
+    "vercel-dev": "vercel dev"
   },
   "dependencies": {
     "@slack/bolt": "^3.17.1",
