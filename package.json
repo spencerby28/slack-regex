@@ -10,7 +10,8 @@
     "setup": "node setup.js",
     "demo": "node examples/api-demo.js",
     "vercel-build": "echo 'Build completed'",
-    "vercel-dev": "vercel dev"
+    "vercel-dev": "vercel dev",
+    "test-vercel": "node examples/vercel-test.js"
   },
   "dependencies": {
     "@slack/bolt": "^3.17.1",

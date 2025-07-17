@@ -226,9 +226,33 @@ curl -X POST http://localhost:3000/api/channels/group \
 
 ## Deployment 🚀
 
-### Environment Variables
+### Vercel (Serverless) - Recommended
 
-Make sure to set these in production:
+Deploy to Vercel for automatic scaling and global performance:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/slack-channel-grouper)
+
+```bash
+# Quick deployment
+npm i -g vercel
+vercel
+
+# Set environment variables
+vercel env add SLACK_BOT_TOKEN
+vercel env add SLACK_SIGNING_SECRET  
+vercel env add API_SECRET_KEY
+
+# Deploy to production
+vercel --prod
+```
+
+📖 **Full Vercel Guide**: See `VERCEL_DEPLOYMENT.md` for complete instructions.
+
+### Traditional Server Deployment
+
+For traditional server deployment with persistent storage:
+
+#### Environment Variables
 
 ```env
 NODE_ENV=production
@@ -239,7 +263,7 @@ API_SECRET_KEY=secure-random-key
 PORT=3000
 ```
 
-### Docker (Optional)
+#### Docker (Optional)
 
 ```dockerfile
 FROM node:18-alpine
